@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raksha Bandhan Wishes</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5a623, #f79c42);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .gif-container {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .gif-container img {
+            max-width: 70%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.3rem;
+            color: #333;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            margin: 20px auto;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .options-container {
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .options-container label {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .options-container input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: 2px solid #f5a623;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .options-container input[type="radio"]:checked {
+            background-color: #f5a623;
+            border-color: #f79c42;
+        }
+
+        .options-container label:hover {
+            background-color: #f5f5f5;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .gift-button {
+            display: inline-block;
+            padding: 15px 100px;
+            font-size: 1.1rem;
+            color: #fff;
+            background-color: #f5a623;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .gift-button:hover {
+            background-color: #f79c42;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding: 15px;
+            font-size: 1rem;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        * {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+            -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+            outline: none !important;
+        }
+    </style>
+    <div class="container">
+        <div class="gif-container">
+            <img src="/images/cat-question.jpg" alt="Raksha Bandhan GIF">
+        </div>
+
+        <p>What would you like to receive as a gift from me? Select and click "Get" 👍</p>
+
+        <div class="options-container">
+            <label>
+                <input type="radio" name="gift" value="chocolate"> Chocolate
+            </label>
+            <label>
+                <input type="radio" name="gift" value="brain"> Brain
+            </label>
+            <label>
+                <input type="radio" name="gift" value="water"> Water
+            </label>
+            <label>
+                <input type="radio" name="gift" value="anything-else"> Anything Else
+            </label>
+        </div>
+
+        <a href="/pages/final.html" class="gift-button">Get</a>
+    </div>
+
+    <div class="footer">
+        Designed by Tejas
+    </div>
+
+    <audio id="page-sound" src="/mp3/Shocked - Sound Effect (HD).mp3" preload="auto"></audio>
+
+    <script>
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('page-sound');
+            audio.play();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Hydrated</title>
+    
+    <style>
+        :root {
+            --border-color: #D7DBE3;
+            --green: #0CD977;
+            --red: #FF1C1C;
+            --pink: #FF93DE;
+            --purple: #5767ED;
+            --yellow: #FFC61C;
+            --rotation: 0deg;
+            font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+        }
+
+        .wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .modal {
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.2); /* Adjusted transparency */
+            border-radius: 0.25rem;
+            z-index: 2;
+        }
+
+        .modal h1 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .modal p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: textSlideIn 3s ease-out;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .modal img {
+            width: 200px;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes textSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes confettiRain {
+            0% {
+                opacity: 1;
+                margin-top: -100vh;
+                margin-left: -200px;
+            } 
+            100% {
+                opacity: 1;
+                margin-top: 100vh;
+                margin-left: 200px;
+            }
+        }
+
+        .confetti {
+            opacity: 0;
+            position: absolute;
+            width: 1rem;
+            height: 1.5rem;
+            transition: 500ms ease;
+            animation: confettiRain 5s infinite;
+        }
+
+        #confetti-wrapper {
+            overflow: hidden !important;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .modal-btn {
+            display: block;
+            margin: 0 -2rem -2rem -2rem;
+            padding: 1rem 2rem;
+            font-size: .75rem;
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 0 0 .25rem .25rem;
+            background-color: var(--green);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        * {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+            -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+            outline: none !important;
+        }
+    </style>
+    <div class="wrapper">
+        <div class="modal">
+            <img src="/images/water-bottle.png" alt="Aquafina Bottle" class="bottle">
+            <p>What you're selected before is not taken seriously as always is not been taken👍. Take this water and stay hydrated! 🫡🤝</p>
+        </div>
+        <div id="confetti-wrapper"></div>
+    </div>
+
+    <script>
+        for(let i = 0; i < 100; i++) {
+            // Random rotation
+            var randomRotation = Math.floor(Math.random() * 360);
+            // Random Scale
+            var randomScale = Math.random();
+            // Random width & height between 0 and viewport
+            var randomWidth = Math.floor(Math.random() * window.innerWidth);
+            var randomHeight =  Math.floor(Math.random() * window.innerHeight);
+            
+            // Random animation-delay
+            var randomAnimationDelay = Math.floor(Math.random() * 15);
+
+            // Random colors
+            var colors = ['#0CD977', '#FF1C1C', '#FF93DE', '#5767ED', '#FFC61C', '#8497B0'];
+            var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+            // Create confetti piece
+            var confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.top = randomHeight + 'px';
+            confetti.style.left = randomWidth + 'px'; // Changed to left for visibility
+            confetti.style.backgroundColor = randomColor;
+            confetti.style.opacity = randomScale;
+            confetti.style.transform = 'skew(15deg) rotate(' + randomRotation + 'deg)';
+            confetti.style.animationDelay = randomAnimationDelay + 's';
+            document.getElementById("confetti-wrapper").appendChild(confetti);
+        }
+    </script>
+
+    <audio id="page-sound" src="/mp3/Ek Mota Hathi  एक मट हथ  Hindi Rhymes for Kids [music].mp3" preload="auto"></audio>
+
+    <script>
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('page-sound');
+            audio.play().catch(function(error) {
+                console.log('Autoplay blocked: ' + error);
+            });
+        });
+    </script>
+</body>
+</html>

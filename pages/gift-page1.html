@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raksha Bandhan Wishes</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5a623, #f79c42);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .gif-container {
+            margin-top: 20px;
+            display: inline-block;
+            position: relative;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+         
+        }
+
+        .gif-container img {
+            max-width: 70%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .gift-container {
+            margin-top: 1px;
+            display: inline-block;
+            position: relative;
+            padding: 1px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+         
+            max-width: 70%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes gifPulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #333;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+            line-height: 1.5;
+        }
+
+        .gift-button {
+            display: inline-block;
+            padding: 10px 80px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #f5a623;
+            border: none;
+            border-radius: 16px;
+            text-decoration: none;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .gift-button:hover {
+            background-color: #f79c42;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding: 10px;
+            font-size: 0.9rem;
+            color: #fff;
+         
+         
+            
+       
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <style>
+        * {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+            -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+            outline: none !important;
+        }
+    </style>
+    <div class="container">
+        <div class="gif-container">
+            <img src="/images/cat-stairing.jpg" alt="Raksha Bandhan GIF">
+        </div>
+        
+        <p>OK,You're on this page means you clicked on gift button. So You really want a Gift ?</p>
+        
+        <div class="gift-container">
+            <a href="/pages/gift-page1-yes.html" class="gift-button">Yes</a>
+            <br>
+            <br>
+            <a href="/pages/gift-page1-no.html" class="gift-button">No</a>
+        </div> 
+    </div>
+
+    <div class="footer">
+        Designed by Tejas
+    </div>
+    <audio id="page-sound" src="/mp3/Shocked - Sound Effect (HD).mp3" preload="auto"></audio>
+    <script>
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('page-sound');
+            audio.oncanplaythrough = function() {
+                audio.play();
+            };
+        });
+    </script>
+
+    
+</body>
+</html>
